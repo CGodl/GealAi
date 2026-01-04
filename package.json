@@ -1,5 +1,5 @@
 {
-  "name": "GaelAi",
+  "name": "gealai",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -12,7 +12,7 @@
   "dependencies": {
     "@clerk/nextjs": "^4.29.3",
     "@hookform/resolvers": "^3.3.1",
-    "@prisma/client": "^5.16.0",
+    "@prisma/client": "^7.2.0",
     "@radix-ui/react-avatar": "^1.0.4",
     "@radix-ui/react-dialog": "^1.0.5",
     "@radix-ui/react-label": "^2.0.2",
@@ -23,9 +23,11 @@
     "class-variance-authority": "^0.7.0",
     "clsx": "^2.0.0",
     "crisp-sdk-web": "^1.0.21",
+    "dotenv": "^17.2.3",
     "lucide-react": "^0.279.0",
     "next": "^16.0.7",
     "openai": "^4.12.3",
+    "pg": "^8.16.3",
     "react": "latest",
     "react-dom": "latest",
     "react-hook-form": "^7.47.0",
@@ -42,7 +44,8 @@
     "zustand": "^4.4.6"
   },
   "devDependencies": {
-    "@types/node": "latest",
+    "@types/node": "^25.0.3",
+    "@types/pg": "^8.16.0",
     "@types/react": "latest",
     "@types/react-dom": "latest",
     "autoprefixer": "latest",
@@ -50,7 +53,7 @@
     "eslint": "latest",
     "eslint-config-next": "latest",
     "postcss": "latest",
-    "prisma": "^5.16.0",
+    "prisma": "^7.2.0",
     "tailwindcss": "latest",
     "typescript": "latest"
   }
