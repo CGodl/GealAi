@@ -129,9 +129,14 @@ const ConversationPage = () => {
 					)}
 					<div className='flex flex-col gap-y-4'>
 						{messages.map((message, idx) => {
+							const contentText = typeof message.content === 'string' 
+								? message.content 
+								: Array.isArray(message.content) && message.content[0]?.type === 'text'
+								? message.content[0].text
+								: '';
 							return (
 								<div
-									key={`${message.content}-${idx}`}
+									key={`${contentText}-${idx}`}
 									className={cn(
 										'p-2 w-full flex items-start gap-x-8 rounded-lg max-w-sm items-center',
 										message.role === 'user'
@@ -140,7 +145,7 @@ const ConversationPage = () => {
 									)}
 								>
 									{message.role === 'user' ? <UserAvatar /> : <BotAvatar />}
-									<p className='text-sm '>{message.content}</p>
+									<p className='text-sm '>{contentText}</p>
 								</div>
 							);
 						})}
